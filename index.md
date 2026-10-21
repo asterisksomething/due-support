@@ -701,4 +701,4 @@ When reporting an issue, it helps to include:
 
 ## Privacy
 
-Curious about what data Due Something accesses and how it's handled? See our [Privacy Policy](https://duesomethingapp.github.io/privacypolicy/).
+Curious about what data Due Something accesses and how it's handled? See our [Privacy Policy](https://asterisksomething.github.io/due-privacypolicy/).
