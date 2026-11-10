@@ -358,7 +358,7 @@ Your tasks and lists already sync through Apple Reminders. Due Something's own e
 - Calendar events a task has written for itself, through Add to Calendar
 - Attachments
 - List icons, list type icons, hidden lists, sort order, list order, and manual task order
-- Sublists — their names, icons, and order, and which tasks are in each
+- Sublists — their names, icons, and order, which tasks are in each, and whether a list shows them as columns
 - Smart lists you've made, saved Multi-List layouts, list templates, and review reminders
 - Synced calendars' settings, and which event each task came from
 - Your history of completed tasks
@@ -462,7 +462,9 @@ Deleting one removes the view, never the tasks in it.
 
 Headings inside a list that group its tasks — say, **Produce** and **Dairy** inside **Groceries**. Each one can be collapsed with a tap on its heading, so a long list stays manageable.
 
-- **Add Sublist** in the list's options menu (the **…** button) asks for a name, an optional icon, and which tasks go in it. Once a list has sublists, the same place says **Manage Sublists**, where you can rename them, change their icons, reorder them, add more, and choose their tasks. Nothing changes until you tap the checkmark.
+- **Add Sublist** in the list's options menu (the **…** button) asks for a name, an optional icon, and which tasks go in it. Once a list has sublists, the same place becomes a **Sublists** menu: **View as Columns** (see _Can I see a list's sublists side by side?_), **Add**, and **Edit**, where you can rename them, change their icons, add more, and choose their tasks. Nothing changes until you tap the checkmark.
+- **Changing their order**: move their columns in View as Columns, or drag a sublist's heading while you reorder the list.
+- **In the lists drawer**, a list with sublists has a small arrow after its name. Tap it to show the sublists underneath, each with its number of open tasks, and tap a sublist to open the list scrolled to it (opening it if it was collapsed). The Mac and iPad sidebars have the same arrow. Each list stays open or closed on that device.
 - **Deleting a sublist** asks whether to move its tasks back to the main list or delete them along with it.
 - **Moving a task into one**: drag it there (see _Can I drag tasks to reorder or move them?_), pick the sublist in the task editor, or choose it under **Move** when you swipe a task or select several. Except when you drag it to a particular spot, it joins at the end of the sublist.
 - They work in your own lists, lists shared with you, lists synced with a calendar, and Smart Lists you've made.
@@ -470,16 +472,34 @@ Headings inside a list that group its tasks — say, **Produce** and **Dairy** i
 - A repeating task's next occurrence stays in the same sublist.
 - Restoring a task from **Recently Deleted** puts it back in its sublist, in the place it had, as long as that sublist still exists.
 
-Sublists sync across your devices — their names, icons, order, and which tasks are in each. Whether a sublist is collapsed is up to each device.
+Sublists sync across your devices — their names, icons, order, which tasks are in each, and whether a list shows them as columns. Whether a sublist is collapsed, and whether the drawer shows a list's sublists, is up to each device.
+
+### Can I see a list's sublists side by side?
+
+Yes. In a list (or a Smart List you've made) with sublists, open the options menu (the **…** button) and choose **Sublists → View as Columns**. The main list and each sublist become columns you scroll across, like a board:
+
+- On iPhone, iPhone Duo held upright, and in Multi-List, each column fills the screen with the next one peeking in from the side. On iPad, Duo turned sideways, and the Mac, the columns sit side by side.
+- **Move a task to another sublist** by dragging it into that column. A line shows exactly where it will land — above a task, between two, or below the last — and an empty column lights up while the task is over it. Dropping on a column's name puts the task at the end of that column. Drag it into the main list's column to take it out of its sublist.
+- **Reorder the columns** by pressing and holding a column's name, then dragging it (on the Mac, just drag the name). The main list's column can move too. Columns follow the sublists' own order, so moving one moves that sublist in the normal view as well.
+- Dropping a task at a particular spot switches the list to **Manual** sort, as dragging in the normal view does. In a Smart List, a drop only changes which sublist the task is in.
+- Completed tasks sit at the bottom of their column.
+- **Swiping**: a sideways swipe that starts on a task opens its swipe actions, as in any list. To scroll across the columns, swipe on a column's name, between columns, or below the tasks — or use two fingers anywhere. Tap a column that's partly off screen to bring it into view.
+- **Tapping a task** opens it as usual, and its column slides over so you can still see it beside the editor.
+
+While columns are showing, the same menu item reads **Hide Columns**, which puts the list back to normal. The choice is remembered for each list and syncs across your devices.
 
 ### Can I drag tasks to reorder or move them?
 
 Yes. Press and hold a task until it lifts, then drag it, on iPhone and iPad:
 
-- **Within a list** — the list opens a space where the task will land, so you can see the new order before you let go.
+- **Within a list** — the list opens a space where the task will land, and a line marks the spot, so you can see the new order before you let go.
+- **Into an empty list** — the list lights up, with a line at the top, while the task is over it.
 - **To the bottom** — past the last task, a line appears instead of a space; let go and the task goes at the end.
 - **Into a sublist** — the whole sublist is outlined while the task is over it, and the space opens inside it. Dropping on a sublist's heading puts the task at the end of that sublist. Drag it out again to put it back in the main list.
 - **To another list** — in Multi-List, drag a task across to the other list to move it there.
+- **Between columns** — with a list in View as Columns, drag a task from one column to another (see _Can I see a list's sublists side by side?_).
+
+If you've turned off **Show Task Separator**, no separator lines appear while you drag, either.
 
 Dropping a task at a particular spot switches the list to **Manual** sort so the order you chose sticks; sublists stay where they were. A list synced with a calendar keeps its date order, so a task dropped there goes where its date puts it. Read-only lists don't accept drops, and dragging is off while you're selecting tasks or reordering.
 
@@ -701,4 +721,4 @@ When reporting an issue, it helps to include:
 
 ## Privacy
 
-Curious about what data Due Something accesses and how it's handled? See our [Privacy Policy](https://asterisksomething.github.io/due-privacypolicy/).
+Curious about what data Due Something accesses and how it's handled? See our [Privacy Policy](https://duesomethingapp.github.io/privacypolicy/).
