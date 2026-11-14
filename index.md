@@ -186,7 +186,7 @@ If the first task can't be saved — an empty title, a permission still to grant
 
 ### How do I attach a photo or document to a task?
 
-Tap the paperclip next to the Notes field in the task editor — you can take a photo, scan a document, pick from your photo library, choose a file, or make a drawing. Taking photos or scanning needs camera permission (**Settings → Due Something → Camera**). Picking from your library uses Apple's photo picker, which only shares the photos you select — Due Something never sees your library. Files up to 25 MB can be attached. Tap an attachment to view it full-screen or mark it up. A task with attachments shows a small paperclip in its row, with a count when there's more than one.
+Tap the paperclip next to the Notes field in the task editor — you can take a photo, scan a document, pick from your photo library, choose a file, or make a drawing. Taking photos or scanning needs camera permission (**Settings → Due Something → Camera**). Picking from your library uses Apple's photo picker, which only shares the photos you select — Due Something never sees your library. Files up to 25 MB can be attached. Tap an attachment to view it full-screen or mark it up. A task with attachments shows a small paperclip in its row, with a count when there's more than one. To see the attachments themselves, turn on **Settings → Look & Feel → List View → Show Attachment Previews**: a thumbnail appears at the right of the task, with up to two more stacked behind it when there are several.
 
 ### Do attachments sync between my devices?
 
@@ -345,6 +345,9 @@ Due Something reads and writes directly to Apple's Reminders app, so your tasks 
 - Make sure iCloud is signed in on all your devices (**Settings → \[Your Name\] → iCloud**).
 - Confirm **Reminders** is toggled on under iCloud settings on each device.
 - Give it a few minutes — iCloud sync isn't always instant.
+- To check right away, tap **Sync Now** in **Settings → iCloud Sync**. It asks for your other devices' changes, as opening the app does; Reminders still syncs on its own schedule, so a change can take a minute or two to arrive.
+
+A device that was off or asleep for a while can open with tasks you've since completed elsewhere. If you completed them in Due Something, they're hidden as soon as that device hears about it — usually within seconds of opening the app, well before Reminders catches up. (This needs iCloud Sync on, and doesn't cover tasks completed in Apple's Reminders app or in synced-calendar lists.)
 
 Everything Due Something adds on top of Reminders — flags, attachments, snooze settings, list icons, and more — syncs separately; see _What does iCloud Sync keep in step?_ below.
 
@@ -374,6 +377,7 @@ It's on automatically when you're signed in to iCloud. Changes usually arrive on
 Yes. Go to **Settings → iCloud Sync**.
 
 - **Sync this Device with iCloud** turns syncing on or off for the device you're holding. When it's off, that device keeps everything it has and stops sending or receiving changes; turn it back on to catch up.
+- **Sync Now** checks for changes from your other devices straight away, and shows when this device last checked.
 - The switches below it choose which sections of Settings are kept the same on all your devices: Default View, Default List, Default Due Time, Notifications, Snooze, Widgets, Calendar Connect, Appearance, and Sounds & Haptics. Widgets and Sounds & Haptics start off, since they're about how one device shows and plays things. Turn a section off to let each device keep its own settings for it; turn it back on to share the settings of the device you turn it on from. These choices apply to all your devices.
 - **Restore iCloud Sync Defaults** puts just these switches back to their defaults. It doesn't change your settings themselves.
 
@@ -659,7 +663,7 @@ Yes. Your open tasks appear in iPhone and Mac search. Tapping a result opens it 
 
 ### Can I add tasks from other apps?
 
-Yes — share a webpage, selected text, a photo, or a file from any app and choose **Due Something** in the share sheet. The page's title becomes the task title, the link is saved in the notes, a shared photo or file becomes an attachment, and any date in shared text is picked up automatically.
+Yes — share a webpage, selected text, a photo, or a file from any app and choose **Due Something** in the share sheet. The page's title becomes the task title, the link is saved in the notes, a shared photo or file becomes an attachment, and any date in shared text is picked up automatically. Share a list and each line can become its own task, without its bullets or numbers.
 
 ### Can I drag something in from another app?
 
@@ -678,12 +682,34 @@ Read-only lists don't accept drops.
 
 ### Can I add several tasks at once?
 
-Yes — type them one per line in the title field and each line becomes its own task, sharing the date, time, repeat, list, and notes you've set. Any attachments go on the first one.
+Yes — type them one per line in the title field and each line becomes its own task. Any attachments go on the first one.
 
-Two more shortcuts while you're typing a title:
+- **Each line can have its own date.** "Call mom tomorrow at 9" and "Pay rent on Friday" get those dates, and the date words come out of the titles. A line without a date uses the Date and Repeat you've set below.
+- **Each line can have its own list.** End a line with "/" and a list name — `Buy seeds /garden` — to send just that task there.
+- **Paste a list.** Bullets, dashes, numbers, and checkboxes at the start of each line ("- Milk", "• Eggs", "1. Bread", "[ ] Call Sam") are left out of the task titles.
+- **Dictate several.** Hold **+** (or tap the microphone by the title) and say **"next task"** between tasks — "Call mom tomorrow at 9, next task, buy milk". "New task" and "new line" work too. The sheet opens with one task per line so you can check them before saving.
 
-- **Type a "/" followed by a list name** — for example `Milk /groceries` — and Due Something offers matching lists. Pick one and the task goes there, with the "/" part removed from the title.
+With two or more lines, a **Tasks** row appears above the settings, with a chip for each task showing its date (and its list, if different):
+
+- **All** — the settings below apply to every task that hasn't been given its own.
+- **Tap a task** — the settings below now change that task only: its date, repeat, list, location, flag, Emergent, snooze, and notes. A dot marks a task with its own settings; **Use Shared Settings** puts it back.
+- **Select Several** — tap more than one task to change them together. Only what you change is copied to the others, so each keeps its own date unless the date is what you change.
+
+Another shortcut while you're typing a title:
+
 - **Retype something you've done before** and after three letters Due Something offers matching completed tasks from that list. Picking one brings the original task back rather than making a copy, so your history stays in one place instead of filling up with duplicates.
+
+### Can I type a date in a task's title?
+
+Yes. Type "Call mom tomorrow at 9", "Pay rent on the 1st every month", or "Gym every Monday" and the date and repeat fill in as you type. A chip under the title shows what was read; tap its ✕ if those words weren't meant as a date (so "Watch Friday Night Lights" stays a title).
+
+Choose how it works in **Settings → Tasks & Lists → Dates in Titles**:
+
+- **Use and Remove** — the date is set and its words come out of the title (the default).
+- **Use and Keep** — the date is set and the title stays exactly as you typed it.
+- **Off** — titles never set a date or repeat. A link in a title still moves to the notes.
+
+The setting also covers the share sheet, Siri, Shortcuts, the Mac menu bar, and tasks added on Apple Watch.
 
 ### Does Due Something work with Siri and Shortcuts?
 
@@ -698,10 +724,6 @@ On the Mac, and on iPad with a keyboard: **⌘N** new task, **⌘⇧N** new list
 Yes. Every control is labeled for VoiceOver, undo toasts are announced and stay until you act on them, and the app follows Larger Text, Reduce Motion, Increase Contrast, and Differentiate Without Color.
 
 Two notes about gestures that are held rather than tapped. Search is normally opened by pulling down on a list and holding; when VoiceOver, Switch Control, or AssistiveTouch is on, a search button appears in the toolbar instead. With Voice Control, use Siri or a keyboard to search.
-
-### I left a tip but something went wrong
-
-Thank you! Tips are one-time purchases handled entirely by Apple's App Store — Due Something never sees your payment details. If a purchase fails or the Tip Jar shows tips as unavailable, check that you're signed in to the App Store and that in-app purchases aren't restricted in Screen Time. If Apple charged you and something still looks wrong, email us and we'll sort it out.
 
 ---
 
